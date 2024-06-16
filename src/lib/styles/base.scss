@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+// Colors
+$darkpurple: #331832;
+$raspberry: #d81e5b;
+$vermillion: #f0544f;
+$ashgray: #c6d8d3;
+$papayawhip: #fdf0d5;
+
+h1 {
+    background-color: $papayawhip;
+    color: $darkpurple;
+    padding: 8px 0 0 2vw;
+    font-size: 32pt;
+    font-weight: 500;
+    font-family: Josefin Sans, Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    padding-top: 8px;
+    font-size: 20pt;
+    font-weight: 500;
+    font-family: Josefin Sans, Arial, Helvetica, sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    margin: auto;
+    background-color: $ashgray;
+    height: 3em;
+    padding: 5px;
+
+    img {
+        width: 15vw;
+        height: auto;
+        margin-right: 1em;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1em;
+        color: $darkpurple;
+        margin: 1vw;
+        padding: 0.5em 1em;
+        border-width: 2px;
+        border-color: $vermillion;
+        background-color: $papayawhip;
+        border-radius: 100%;
+
+        &:hover {
+            color: $vermillion;
+        }
+    }
+}
+
+.footer-container {
+    background-color: $ashgray;
+    color: $darkpurple;
+
+    h2 {
+        text-align: center;
+        padding: 0.5em;
+    }
+
+    .contact-info {
+        display: flex;
+    }
+}
+
+.half-width {
+    width: 50vw;
+    padding: 0 1em;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
