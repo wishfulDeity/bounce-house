@@ -1,25 +1,15 @@
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://shfourdo:<password>@bouncehouse-cluster.6vmmreb.mongodb.net/?retryWrites=true&w=majority&appName=bouncehouse-cluster";
+import clientPromise from "$lib/mongodb-client";
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
-
-async function run() {
-  try {
-    // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
+export async function customerInquire(request) {
+    const dbConnection = await clientPromise;
+    const db = dbConnection.db();
+    const collection = db.collection('bouncehouse-cluster');
+    const inquiry = JSON.parse(request.body);
+    const newInquiry = await collection.insertOne(inquiry);
+    return {
+        status: 200,
+        body: {
+            newInquiry
+        }
+    }
 }
-run().catch(console.dir);
