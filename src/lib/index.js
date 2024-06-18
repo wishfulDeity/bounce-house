@@ -27,7 +27,11 @@ async function run() {
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
 
     const db = client.db('bounce-house');
-    const coll = db.collection()
+    const coll = db.collection();
+    const cursor = coll.find();
+
+    await coll.forEach(console.log);
+
   } finally {
     // Ensures that the client will close when you finish/error
     await client.close();
