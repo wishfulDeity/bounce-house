@@ -1,26 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 // Colors
-$darkpurple: #331832;
-$raspberry: #d81e5b;
-$vermillion: #f0544f;
-$ashgray: #c6d8d3;
-$papayawhip: #fdf0d5;
+$text-primary: #331832;
+$text-secondary: #d81e5b;
+$tert: #f0544f;
+$button-bg: #bbbbbb;
+$nav-bg: #c6d8d3;
+
+// Fonts
+$josefin: Josefin Sans, Arial, Helvetica, sans-serif;
+
+body {
+    margin: 0px;
+}
 
 h1 {
-    background-color: $papayawhip;
-    color: $darkpurple;
-    padding: 8px 0 0 2vw;
+    background-color: bgcol;
+    color: $text-primary;
+    text-align: center;
     font-size: 32pt;
     font-weight: 500;
-    font-family: Josefin Sans, Arial, Helvetica, sans-serif;
+    font-family: $josefin;
 }
 
 h2 {
     padding-top: 8px;
     font-size: 20pt;
     font-weight: 500;
-    font-family: Josefin Sans, Arial, Helvetica, sans-serif;
+    font-family: $josefin;
 }
 
 .nav-container {
@@ -28,44 +35,37 @@ h2 {
     align-items: center;
     position: sticky;
     margin: auto;
-    background-color: $ashgray;
+    background-color: $nav-bg;
     height: 3em;
-    padding: 5px;
+    padding: 15px 5px 15px 5px;
 
     img {
+        align-self: left;
         width: 15vw;
         height: auto;
-        margin-right: 1em;
+        margin-right: 1.5vw;
+        margin-left: 1vw;
     }
 
     a {
         text-decoration: none;
         font-size: 1em;
-        color: $darkpurple;
+        color: $text-primary;
         margin: 1vw;
-        padding: 0.5em 1em;
+        padding: 1em;
         border-width: 2px;
-        border-color: $vermillion;
-        background-color: $papayawhip;
+        border-color: $tert;
         border-radius: 100%;
+        font-family: $josefin;
+        scale: 100%;
 
         &:hover {
-            color: $vermillion;
+            color: $tert;
         }
-    }
-}
 
-.footer-container {
-    background-color: $ashgray;
-    color: $darkpurple;
-
-    h2 {
-        text-align: center;
-        padding: 0.5em;
-    }
-
-    .contact-info {
-        display: flex;
+        nav {
+            align-self: end;
+        }
     }
 }
 

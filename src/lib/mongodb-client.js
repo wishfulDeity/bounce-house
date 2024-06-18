@@ -1,12 +1,15 @@
 import dotenv from 'dotenv';
-dotenv.config();
+import { MongoClient, ServerApiVersion } from 'mongodb';
 
-import { MongoClient } from 'mongodb';
+dotenv.config();
 
 const uri = process.env['MONGODB_URI'];
 const options = {
     useUnifiedTopology: true,
     userNewUrlPArser: true,
+    versiom: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
 }
 
 let client;

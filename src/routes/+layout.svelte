@@ -4,15 +4,11 @@
         <a href="/">Home</a>
         <a href="/rentals">Rentals</a>
         <a href="/development">Development</a>
+        <a href="/contact">Contact us</a>
     </nav>
 </div>
 
 <slot></slot>
-
-<div class="footer-container">
-    <h2>Contact us!</h2>
-    
-</div>
 
 <style>
     @import "$lib/styles/base.scss";
