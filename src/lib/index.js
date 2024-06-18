@@ -1,15 +1,36 @@
-import clientPromise from "$lib/mongodb-client";
+import dotenv from 'dotenv';
+import { MongoClient, ServerApiVersion } from 'mongodb';
 
-export async function customerInquire(request) {
-    const dbConnection = await clientPromise;
-    const db = dbConnection.db();
-    const collection = db.collection('bouncehouse-cluster');
-    const inquiry = JSON.parse(request.body);
-    const newInquiry = await collection.insertOne(inquiry);
-    return {
-        status: 200,
-        body: {
-            newInquiry
-        }
-    }
+dotenv.config();
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = dotenv.parse['MONGODB_URI'];
+
+if (!uri) {
+    throw new Error("Please add your Mongo URI to .env.local");
 }
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+async function run() {
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+
+    const db = client.db('bounce-house');
+    const coll = db.collection()
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);
