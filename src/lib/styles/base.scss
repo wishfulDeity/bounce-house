@@ -4,6 +4,7 @@
 $text-primary: #331832;
 $text-secondary: #d81e5b;
 $tert: #f0544f;
+$bgcol: #ffffff;
 $button-bg: #bbbbbb;
 $nav-bg: #c6d8d3;
 
@@ -15,7 +16,7 @@ body {
 }
 
 h1 {
-    background-color: bgcol;
+    background-color: $bgcol;
     color: $text-primary;
     text-align: center;
     font-size: 32pt;
@@ -40,31 +41,53 @@ h2 {
     padding: 15px 5px 15px 5px;
 
     img {
-        align-self: left;
         width: 15vw;
         height: auto;
         margin-right: 1.5vw;
         margin-left: 1vw;
     }
 
-    a {
+    .navbutton {
         text-decoration: none;
         font-size: 1em;
         color: $text-primary;
-        margin: 1vw;
+        margin: 0 1vw 0 1vw;
         padding: 1em;
-        border-width: 2px;
-        border-color: $tert;
-        border-radius: 100%;
         font-family: $josefin;
-        scale: 100%;
+        border: none;
+        background-color: #00000000;
+        cursor: pointer;
 
-        &:hover {
+        &:hover, &:focus {
             color: $tert;
         }
 
         nav {
-            text-align: flex-end;
+            justify-self: end;
+        }
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+
+        a {
+            color: $text-primary;
+            padding: 0.5em;
+            text-decoration: none;
+            display: block;
+
+            &:hover {
+                background-color: #bbb;
+            }
+        }
+
+        .show {
+            display: block;
         }
     }
 }
