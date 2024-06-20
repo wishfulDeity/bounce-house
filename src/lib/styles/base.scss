@@ -22,6 +22,7 @@ h1 {
     font-size: 32pt;
     font-weight: 500;
     font-family: $josefin;
+    margin-bottom: 36px;
 }
 
 h2 {
@@ -29,6 +30,12 @@ h2 {
     font-size: 20pt;
     font-weight: 500;
     font-family: $josefin;
+}
+
+p {
+    font-family: $josefin;
+    font-weight: 300;
+    text-align: center;
 }
 
 .nav-container {
@@ -85,11 +92,11 @@ h2 {
                 background-color: #bbb;
             }
         }
-
-        .show {
-            display: block;
-        }
     }
+}
+
+.center {
+    
 }
 
 .half-width {
