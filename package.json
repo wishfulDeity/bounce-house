@@ -18,7 +18,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"dotenv": "^16.4.5",
-		"mongodb": "^6.7.0"
+		"@supabase/supabase-js": "^2.43.5",
+		"dotenv": "^16.4.5"
 	}
 }
