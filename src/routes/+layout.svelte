@@ -32,8 +32,8 @@
             </button>
             {#if showDropdown}
                 <div class="dropdown-content">
-                    <a href="/catalog/rentals">Rentals</a>
-                    <a href="/catalog/development">Development</a>
+                    <a href="/catalog/rentals" on:click={toggleDropdown}>Rentals</a>
+                    <a href="/catalog/development"on:click={toggleDropdown}>Development</a>
                 </div>
             {/if}
         </div>
