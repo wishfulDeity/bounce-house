@@ -9,7 +9,10 @@
 
 <div class="nav-container">
     <a href="/">
-        <img src='$lib/images/logos/bouncehouselogo_wide.png' alt="The Bounce House logo">
+        <img
+            src="$lib/images/logos/bouncehouselogo_wide.png"
+            alt="The Bounce House logo"
+        />
     </a>
     <nav>
         <a class="navbutton" href="/">Home</a>
@@ -21,11 +24,11 @@
         -->
         <div class="dropdown-container">
             <button class="navbutton" on:click={toggleDropdown} type="button">
-            {#if showDropdown}
-                Catalog ▲
-            {:else}
-                Catalog ▼
-            {/if}
+                {#if showDropdown}
+                    Catalog ▲
+                {:else}
+                    Catalog ▼
+                {/if}
             </button>
             {#if showDropdown}
                 <div class="dropdown-content">
@@ -37,7 +40,7 @@
     </nav>
 </div>
 
-<slot></slot>
+<slot />
 
 <style>
     @import "$lib/styles/base.scss";
