@@ -3,7 +3,7 @@
 
     function toggleDropdown() {
         showDropdown = !showDropdown;
-        console.log("button pressed");
+        console.log(`button pressed!!\nshowDropdown = ${showDropdown}`);
     }
 </script>
 
@@ -20,11 +20,11 @@
             ▼
         -->
         <div class="dropdown-container">
-            <button class="navbutton" on:click={toggleDropdown()} type="button">
-            {#if !showDropdown}
-                Catalog ▼
-            {:else}
+            <button class="navbutton" on:click={toggleDropdown} type="button">
+            {#if showDropdown}
                 Catalog ▲
+            {:else}
+                Catalog ▼
             {/if}
             </button>
             {#if showDropdown}

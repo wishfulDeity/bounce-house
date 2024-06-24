@@ -70,14 +70,10 @@ p {
         &:hover, &:focus {
             color: $tert;
         }
-
-        nav {
-            justify-self: end;
-        }
     }
 
     .dropdown-content {
-        display: none;
+        display: block;
         position: absolute;
         background-color: white;
         min-width: 160px;
@@ -86,12 +82,13 @@ p {
 
         a {
             color: $text-primary;
+            font-family: $josefin;
             padding: 0.5em;
             text-decoration: none;
             display: block;
 
             &:hover {
-                background-color: #bbb;
+                background-color: #eee;
             }
         }
     }
