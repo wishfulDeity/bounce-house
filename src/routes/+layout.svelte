@@ -1,3 +1,12 @@
+<script>
+    let showDropdown = false;
+
+    function toggleDropdown() {
+        showDropdown = !showDropdown;
+        console.log("button pressed");
+    }
+</script>
+
 <div class="nav-container">
     <a href="/">
         <img src='$lib/images/logos/bouncehouselogo_wide.png' alt="The Bounce House logo">
@@ -5,8 +14,26 @@
     <nav>
         <a class="navbutton" href="/">Home</a>
         <a class="navbutton" href="/contact">Contact us</a>
-        <a class="navbutton" href="/rentals">Rentals</a>
-        <a class="navbutton" href="/development">Development</a>
+        <!--
+            Up and down pointing arrows for future use:
+            ▲
+            ▼
+        -->
+        <div class="dropdown-container">
+            <button class="navbutton" on:click={toggleDropdown()} type="button">
+            {#if !showDropdown}
+                Catalog ▼
+            {:else}
+                Catalog ▲
+            {/if}
+            </button>
+            {#if showDropdown}
+                <div class="dropdown-content">
+                    <a href="/catalog/rentals">Rentals</a>
+                    <a href="/catalog/development">Development</a>
+                </div>
+            {/if}
+        </div>
     </nav>
 </div>
 
