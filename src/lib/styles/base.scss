@@ -58,13 +58,12 @@ p {
         margin-left: 1vw;
     }
 
-    .navbutton,
-    .drowpdown-container {
+    .navbutton {
         text-decoration: none;
         display: inline;
         font-size: 1em;
         color: $text-primary;
-        margin: 0 1vw 0 1vw;
+        margin: 0 12px 0 12px;
         padding: 1em;
         font-family: $josefin;
         border: none;
@@ -73,16 +72,17 @@ p {
 
         &:hover,
         &:focus {
-            color: $tert;
+            color: $text-secondary;
         }
     }
 
     .dropdown-content {
         display: block;
         position: absolute;
+        top: 60px; left: calc(17.5vw + 260px);
         background-color: white;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px #00000033;
         z-index: 1;
 
         a {
@@ -94,13 +94,35 @@ p {
 
             &:hover {
                 background-color: #eee;
+                color: $text-secondary;
             }
         }
     }
 }
 
-.center {
-    justify-self: center;
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .product {
+        font-family: $josefin;
+        max-width: 25%;
+
+        .product-card {
+            padding: 2%;
+            flex-grow: 1;
+            flex-basis: 16;
+            display: flex;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .product-info {
+            margin-top: auto;
+        }
+    }
 }
 
 .half-width {

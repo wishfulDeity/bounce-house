@@ -3,7 +3,6 @@
 
     function toggleDropdown() {
         showDropdown = !showDropdown;
-        console.log(`button pressed!!\nshowDropdown = ${showDropdown}`);
     }
 </script>
 
@@ -14,35 +13,39 @@
             alt="The Bounce House logo"
         />
     </a>
-    <nav>
-        <a class="navbutton" href="/">Home</a>
-        <a class="navbutton" href="/contact">Contact us</a>
+    <nav> |
+        <a class="navbutton" href="/">Home</a> |
+        <a class="navbutton" href="/contact">Contact us</a> |
         <!--
             Up and down pointing arrows for future use:
             ▲
             ▼
         -->
-        <div class="dropdown-container">
-            <a href="{null}" class="navbutton" on:click={toggleDropdown} type="button">
-                {#if showDropdown}
-                    Catalog ▲
-                {:else}
-                    Catalog ▼
-                {/if}
-            </a>
+        <a
+            href={null}
+            class="navbutton"
+            on:click={toggleDropdown}
+        >
             {#if showDropdown}
-                <div class="dropdown-content">
-                    <a href="/catalog/rentals" on:click={toggleDropdown}>
-                        Rentals
-                    </a>
-                    <a href="/catalog/development" on:click={toggleDropdown}>
-                        Development
-                    </a>
-                </div>
+                Catalog ▲
+            {:else}
+                Catalog ▼
             {/if}
-        </div>
+        </a> |
+        {#if showDropdown}
+            <div class="dropdown-content">
+                <a href="/catalog/rentals" on:click={toggleDropdown}>
+                    Rentals
+                </a>
+                <a href="/catalog/development" on:click={toggleDropdown}>
+                    Development
+                </a>
+            </div>
+        {/if}
     </nav>
 </div>
+
+<div style="height: 50000;"></div>
 
 <slot />
 

@@ -6,4 +6,4 @@
 
 <p>i LIED, there is NO CONTACT</p>
 <p>(wip)</p>
-<img class="center" src="$lib/images/phone.webp" alt="Fisher Price Phone">
+<img src="$lib/images/phone.webp" alt="Fisher Price Phone">

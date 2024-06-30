@@ -1,12 +1,25 @@
+<script>
+    import products from "$lib/products.json";
+
+    console.log(products);
+</script>
+
 <svelte:head>
     <title>Rentals</title>
 </svelte:head>
 
 <h1>Rentals</h1>
 
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsum labore
-    id eius quo debitis.<br />
-    Expedita impedit adipisci velit possimus quia deleniti veritatis in, dignissimos
-    sequi reprehenderit iure, vero quos?
-</p>
+<div class="product-container">
+    {#each products as product (product.id)}
+        <div class="product">
+            <div class="product-card">
+                <img src={product.image} alt={product.alt}/>
+            </div>
+            <div class="product-info">
+                <p>{product.description}</p>
+                <p>${product.price}/day</p>
+            </div>
+        </div>
+    {/each}
+</div>

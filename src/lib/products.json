@@ -1,0 +1,28 @@
+{
+    "products": [
+        {
+            "id": 0,
+            "name": "Placeholder",
+            "image": "$lib/images/placeholder.png",
+            "alt": "Placeholder",
+            "description": "Placeholder House",
+            "price": 150.00
+        },
+        {
+            "id": 1,
+            "name": "Placeholder Two",
+            "image": "$lib/images/placeholder.png",
+            "alt": "Placeholder",
+            "description": "Placeholder House Two",
+            "price": 180.00
+        },
+        {
+            "id": 2,
+            "name": "Placeholder Three",
+            "image": "$lib/images/placeholder.png",
+            "alt": "Placeholder",
+            "description": "Placeholder House Three",
+            "price": 240.00
+        }
+    ]
+}
