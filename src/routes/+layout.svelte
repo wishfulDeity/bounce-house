@@ -13,9 +13,9 @@
             alt="The Bounce House logo"
         />
     </a>
-    <nav> |
-        <a class="navbutton" href="/">Home</a> |
-        <a class="navbutton" href="/contact">Contact us</a> |
+    <nav>
+        <a class="navbutton" href="/">Home</a>
+        <a class="navbutton" href="/contact">Contact us</a>
         <!--
             Up and down pointing arrows for future use:
             ▲
@@ -31,7 +31,7 @@
             {:else}
                 Catalog ▼
             {/if}
-        </a> |
+        </a>
         {#if showDropdown}
             <div class="dropdown-content">
                 <a href="/catalog/rentals" on:click={toggleDropdown}>
@@ -44,8 +44,6 @@
         {/if}
     </nav>
 </div>
-
-<div style="height: 50000;"></div>
 
 <slot />
 
