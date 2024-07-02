@@ -1,5 +1,5 @@
 <script>
-    import data from '$lib/data/products.json';
+    import data from "$lib/data/products.json";
     const products = Array(data);
 
     console.log(products);
