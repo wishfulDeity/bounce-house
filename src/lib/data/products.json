@@ -1,61 +1,59 @@
-{
-    "data": [
-        {
-            "name": "Junior Bounce",
-            "image": "$lib/images/placeholder.png",
-            "alt": "junior bounce",
-            "description": "Smallest castle available.",
-            "space_lwh": "3.5m x 3m x 2.5m",
-            "audience": [
-                "children"
-            ],
-            "price": 100.00
-        },
-        {
-            "name": "Micro Zone",
-            "image": "$lib/images/placeholder.png",
-            "alt": "micro zone",
-            "description": "Small castle with ceiling and netting.",
-            "space_lwh": "4m x 3m x 3m",
-            "audience": [
-                "children"
-            ],
-            "price": 120.00
-        },
-        {
-            "name": "Rat Race",
-            "image": "$lib/images/placeholder.png",
-            "alt": "rat race",
-            "description": "Small castle with inbuilt inflatable characters.",
-            "space_lwh": "4m x 3m x 2.5m",
-            "audience": [
-                "children"
-            ],
-            "price": 140.00
-        },
-        {
-            "name": "Classic Bounce",
-            "image": "$lib/images/placeholder.png",
-            "alt": "classic bounce",
-            "description": "Medium open front castle.",
-            "space_lwh": "4m x 4m x 3m",
-            "audience": [
-                "children",
-                "adults"
-            ],
-            "price": 140.00
-        },
-        {
-            "name": "Hilo slider",
-            "image": "$lib/images/placeholder.png",
-            "alt": "hilo slider",
-            "description": "Medium open front castle.",
-            "space_lwh": "4m x 4m x 3m",
-            "audience": [
-                "children",
-                "adults"
-            ],
-            "price": 140.00
-        }
-    ]
-}
+[
+    {
+        "name": "Junior Bounce",
+        "image": "/src/lib/images/placeholder.png",
+        "alt": "junior bounce",
+        "description": "Smallest castle available.",
+        "space_lwh": "3.5m x 3m x 2.5m",
+        "audience": [
+            "children"
+        ],
+        "price": 100.00
+    },
+    {
+        "name": "Micro Zone",
+        "image": "/src/lib/images/placeholder.png",
+        "alt": "micro zone",
+        "description": "Small castle with ceiling and netting.",
+        "space_lwh": "4m x 3m x 3m",
+        "audience": [
+            "children"
+        ],
+        "price": 120.00
+    },
+    {
+        "name": "Rat Race",
+        "image": "/src/lib/images/placeholder.png",
+        "alt": "rat race",
+        "description": "Small castle with inbuilt inflatable characters.",
+        "space_lwh": "4m x 3m x 2.5m",
+        "audience": [
+            "children"
+        ],
+        "price": 140.00
+    },
+    {
+        "name": "Classic Bounce",
+        "image": "/src/lib/images/placeholder.png",
+        "alt": "classic bounce",
+        "description": "Medium open front castle.",
+        "space_lwh": "4m x 4m x 3m",
+        "audience": [
+            "children",
+            "adults"
+        ],
+        "price": 140.00
+    },
+    {
+        "name": "Hilo slider",
+        "image": "/src/lib/images/placeholder.png",
+        "alt": "hilo slider",
+        "description": "Medium open front castle.",
+        "space_lwh": "4m x 4m x 3m",
+        "audience": [
+            "children",
+            "adults"
+        ],
+        "price": 140.00
+    }
+]

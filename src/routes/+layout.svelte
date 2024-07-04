@@ -34,10 +34,10 @@
         </a>
         {#if showDropdown}
             <div class="dropdown-content">
-                <a href="/catalog/rentals" on:click={toggleDropdown}>
+                <a href="/rentals" on:click={toggleDropdown}>
                     Rentals
                 </a>
-                <a href="/catalog/development" on:click={toggleDropdown}>
+                <a href="/development" on:click={toggleDropdown}>
                     Development
                 </a>
             </div>
