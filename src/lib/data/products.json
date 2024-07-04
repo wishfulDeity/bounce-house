@@ -1,7 +1,7 @@
 [
     {
         "name": "Junior Bounce",
-        "image": "/src/lib/images/placeholder.png",
+        "image": "/src/lib/images/juniorbounce.jpg",
         "alt": "junior bounce",
         "description": "Smallest castle available.",
         "space_lwh": "3.5m x 3m x 2.5m",
@@ -12,7 +12,7 @@
     },
     {
         "name": "Micro Zone",
-        "image": "/src/lib/images/placeholder.png",
+        "image": "/src/lib/images/microzone.jpg",
         "alt": "micro zone",
         "description": "Small castle with ceiling and netting.",
         "space_lwh": "4m x 3m x 3m",
@@ -23,7 +23,7 @@
     },
     {
         "name": "Rat Race",
-        "image": "/src/lib/images/placeholder.png",
+        "image": "/src/lib/images/ratrace.gif",
         "alt": "rat race",
         "description": "Small castle with inbuilt inflatable characters.",
         "space_lwh": "4m x 3m x 2.5m",
@@ -34,7 +34,7 @@
     },
     {
         "name": "Classic Bounce",
-        "image": "/src/lib/images/placeholder.png",
+        "image": "/src/lib/images/classicbounce.jpg",
         "alt": "classic bounce",
         "description": "Medium open front castle.",
         "space_lwh": "4m x 4m x 3m",
@@ -46,14 +46,24 @@
     },
     {
         "name": "Hilo slider",
-        "image": "/src/lib/images/placeholder.png",
+        "image": "/src/lib/images/hiloslider.jpg",
         "alt": "hilo slider",
-        "description": "Medium open front castle.",
-        "space_lwh": "4m x 4m x 3m",
+        "description": "Medium castle with built in slide.",
+        "space_lwh": "4m x 4m x 3.5m",
         "audience": [
-            "children",
-            "adults"
+            "children"
         ],
-        "price": 140.00
+        "price": 160.00
+    },
+    {
+        "name": "Coliseum",
+        "image": "/src/lib/images/coliseum.jpg",
+        "alt": "coliseum",
+        "description": "Medium castle with ceiling and columns.",
+        "space_lwh": "4m x 4.5m x 3.5m",
+        "audience": [
+            "children"
+        ],
+        "price": 170.00
     }
 ]
