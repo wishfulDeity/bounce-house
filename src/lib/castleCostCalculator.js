@@ -1,5 +1,6 @@
-export function calculateCost(size, walls, extra) {
+export function calculateCost(size, walls, slides, tunnels) {
     let workingSize, sizeCost, wallsCost, extraCost, finalTotal;
+    let profit = 1; // one (1) being 100% as in "no change"
 
     switch (size) {
         case 'small':
@@ -20,17 +21,13 @@ export function calculateCost(size, walls, extra) {
             wallsCost = 25;
     }
 
-    switch (extra) {
-        case 'none':
-            extraCost = 0;
-        case 'tunnel':
-            extraCost = 70;
-        case 'slide':
-            extraCost = 160;
-    }
-
+    extraCost = ((slides * 160) + (tunnels * 70)) * profit;
     finalTotal = sizeCost + (3 * (wallsCost * workingSize)) + extraCost;
+    finalTotal *= profit;
 
-    console.log(`${sizeCost} + (3 * (${wallsCost} * ${workingSize})) + ${extraCost} = ${finalTotal}`)
     return finalTotal;
+}
+
+if (wallType === "net") {
+    
 }

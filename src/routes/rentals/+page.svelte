@@ -16,7 +16,7 @@
         <div class="product">
             <a href={null}>
                 <div class="product-card">
-                    <img src={product.image} alt={product.alt} />
+                    <img src={product.image} alt={product.description} />
                 </div>
                 <div class="product-info">
                     <p class="product-name">{product.name}</p>
