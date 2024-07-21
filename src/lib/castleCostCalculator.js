@@ -27,7 +27,3 @@ export function calculateCost(size, walls, slides, tunnels) {
 
     return finalTotal;
 }
-
-if (wallType === "net") {
-    
-}
