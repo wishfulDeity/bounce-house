@@ -10,11 +10,12 @@
 
 <h3>Pre-made castles:</h3>
 <p>Actual products may differ from what is shown in the images</p>
+<p>Click the cards to send us an email at example@gmail.com!</p>
 
 <div class="product-container">
     {#each products as product}
         <div class="product">
-            <a href={null}>
+            <a href="mailto:example@gmail.com?subject={product.name}">
                 <div class="product-card">
                     <img src={product.image} alt={product.description} />
                 </div>

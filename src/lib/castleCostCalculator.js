@@ -29,15 +29,15 @@ export function calculateCost(size, walls, slides = 0, tunnels = 0, profit) {
             wallsCostPerMetre = 25;
     }
 
+    // Add cost of base
+    finalTotal += baseCost
+
     // Add cost of tunnels and slides
     finalTotal += costPerTunnel * tunnels;
     finalTotal += costPerSlide * slides;
 
-    // Add cost of base
-    finalTotal += baseCost
-
     // Do walls cost
-    finalTotal += (3 * workingSize) * wallsCostPerMetre;
+    finalTotal += 3 * workingSize * (wallsCostPerMetre)
 
     console.log(`total before profit: ${finalTotal}`);
 

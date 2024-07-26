@@ -6,7 +6,7 @@
     let tunnels;
     let slides;
     let totalEstimatedCost;
-    
+
     $: {
         totalEstimatedCost;
     };
