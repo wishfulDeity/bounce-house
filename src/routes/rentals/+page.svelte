@@ -1,10 +1,13 @@
 <script>
     import products from "$lib/data/products.json";
+    import Navbar from "$lib/Navbar.svelte";
 </script>
 
 <svelte:head>
     <title>Rentals</title>
 </svelte:head>
+
+<Navbar class="sticky" />
 
 <h1>Rentals</h1>
 

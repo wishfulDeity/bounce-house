@@ -1,6 +1,13 @@
+<script>
+    import Navbar from "$lib/Navbar.svelte";
+</script>
+
 <svelte:head>
     <title>Contact</title>
 </svelte:head>
+
+<Navbar class="sticky" />
+
 
 <h1>Contact us</h1>
 

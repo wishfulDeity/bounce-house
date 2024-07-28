@@ -1,3 +1,9 @@
+<script>
+    import Navbar from "$lib/Navbar.svelte";
+</script>
+
+<Navbar class="sticky" />
+
 <div class="product-container">
     <div class="product">
         <a href="{null}">

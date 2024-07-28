@@ -1,17 +1,19 @@
 <script>
     import { calculateCost } from "$lib/castleCostCalculator.js";
+    import Navbar from "$lib/Navbar.svelte";
 
     let size;
     let walls;
     let tunnels;
     let slides;
     let totalEstimatedCost;
-
 </script>
 
 <svelte:head>
     <title>Development</title>
 </svelte:head>
+
+<Navbar class="sticky" />
 
 <h1>Development</h1>
 <p>(page still in progress)</p>
