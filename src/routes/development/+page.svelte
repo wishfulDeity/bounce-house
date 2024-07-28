@@ -7,14 +7,6 @@
     let slides;
     let totalEstimatedCost;
 
-    $: {
-        size;
-        walls;
-        tunnels;
-        slides;
-        totalEstimatedCost;
-    };
-
 </script>
 
 <svelte:head>
