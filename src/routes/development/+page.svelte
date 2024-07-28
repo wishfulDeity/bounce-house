@@ -8,6 +8,10 @@
     let totalEstimatedCost;
 
     $: {
+        size;
+        walls;
+        tunnels;
+        slides;
         totalEstimatedCost;
     };
 

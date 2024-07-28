@@ -1,9 +1,16 @@
-// i give up this math doesnt work what the hell
-// FIXME: WHAT IS GOING ON!!!!
-export function calculateCost(size, walls, slides = 0, tunnels = 0, profit) {
-    let workingSize, baseCost, wallsCostPerMetre, finalTotal = 0;
-    let costPerTunnel = 70;
+export function calculateCost(
+    size = "small",
+    walls = "inflated",
+    slides = 0,
+    tunnels = 0,
+    profit = 1.25
+) {
+    let workingSize = 0;
+    let baseCost = 0;
+    let wallsCostPerMetre = 0;
+    let finalTotal = 0;
     let costPerSlide = 160;
+    let costPerTunnel = 70;
 
     // Get size costs and how long each wall is
     switch (size) {
@@ -29,20 +36,32 @@ export function calculateCost(size, walls, slides = 0, tunnels = 0, profit) {
             wallsCostPerMetre = 25;
     }
 
-    // Add cost of base
-    finalTotal += baseCost
-
-    // Add cost of tunnels and slides
-    finalTotal += costPerTunnel * tunnels;
-    finalTotal += costPerSlide * slides;
+    // Set finalTotal to baseCost to add stuff on later
+    finalTotal = baseCost;
+    // 750
 
     // Do walls cost
-    finalTotal += 3 * workingSize * (wallsCostPerMetre)
+    finalTotal += 3 * workingSize * wallsCostPerMetre;
+    // 750 + 3 * 4 * 40 
+    // = 750 + 480
+    // = 1230
+
+    // Add cost of tunnels and slides
+    finalTotal += costPerSlide * slides;
+    finalTotal += costPerTunnel * tunnels;
+    // 1230 + 160
+    // = 1390
+    // 1390 + 2 * 70
+    // = 1390 + 140
+    // = 1530
 
     console.log(`total before profit: ${finalTotal}`);
 
     // Add profit
     finalTotal *= profit;
+    // 1530 * 1.25
+    // = 1912.5
+    // ^ APPARENTLY NOT??!??!!!?
 
     console.log(`finalTotal: ${finalTotal}`);
     return finalTotal;
