@@ -26,6 +26,7 @@
 <div class="cost-calculator-container">
     <form>
         <h2>Castle Cost Calculator™</h2>
+        <h3>${totalEstimatedCost}</h3>
 
         <label for="size" class="mainlabel">Size</label>
         <select name="size" id="size" bind:value={size}>
@@ -44,7 +45,6 @@
         <input type="number" id="tunnel" name="tunnel" bind:value={tunnels} min="0" max="10">
         <label for="slide">Slides ($160 per)</label>
         <input type="number" id="slide" name="slide" bind:value={slides} min="0" max="10">
-        <h3>${totalEstimatedCost}</h3>
     </form>
 </div>
 
