@@ -6,11 +6,12 @@
     let walls;
     let tunnels;
     let slides;
+    let profit = 1.25;
     let totalEstimatedCost;
 
     $: {
         console.log(`size:${size}\nwalls:${walls}\ntunnels:${tunnels}\nslides:${slides}\ntotalEstimatedCost:${totalEstimatedCost}`);
-        totalEstimatedCost;
+        totalEstimatedCost = calculateCost(size, walls, slides, tunnels, profit);
     }
 </script>
 
@@ -21,10 +22,9 @@
 <Navbar />
 
 <h1>Development</h1>
-<p>(page still in progress)</p>
 
 <div class="cost-calculator-container">
-    <form on:submit={totalEstimatedCost = calculateCost(size, walls, slides, tunnels, 1.25)}>
+    <form>
         <h2>Castle Cost Calculator™</h2>
 
         <label for="size" class="mainlabel">Size</label>
@@ -44,11 +44,8 @@
         <input type="number" id="tunnel" name="tunnel" bind:value={tunnels} min="0" max="10">
         <label for="slide">Slides ($160 per)</label>
         <input type="number" id="slide" name="slide" bind:value={slides} min="0" max="10">
-
-        <input type="submit" value="Calculate Cost">
-
-        <label for="submit">Estimated Development Cost: ${totalEstimatedCost}</label>
+        <h3>${totalEstimatedCost}</h3>
     </form>
 </div>
 
-<p>+25% for the cost of actually building it</p>
+<p>Cost includes +{(profit - 1) * 100}% for the cost of actually building it</p>
