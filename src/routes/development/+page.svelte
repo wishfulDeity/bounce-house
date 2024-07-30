@@ -7,13 +7,18 @@
     let tunnels;
     let slides;
     let totalEstimatedCost;
+
+    $: {
+        console.log(`size:${size}\nwalls:${walls}\ntunnels:${tunnels}\nslides:${slides}\ntotalEstimatedCost:${totalEstimatedCost}`);
+        totalEstimatedCost;
+    }
 </script>
 
 <svelte:head>
     <title>Development</title>
 </svelte:head>
 
-<Navbar class="sticky" />
+<Navbar />
 
 <h1>Development</h1>
 <p>(page still in progress)</p>
@@ -35,9 +40,9 @@
             <option value="netted">Netted Walls $25 per metre</option>
         </select>
 
-        <label for="tunnel">Tunnels</label>
+        <label for="tunnel">Tunnels ($70 per)</label>
         <input type="number" id="tunnel" name="tunnel" bind:value={tunnels} min="0" max="10">
-        <label for="slide">Slides</label>
+        <label for="slide">Slides ($160 per)</label>
         <input type="number" id="slide" name="slide" bind:value={slides} min="0" max="10">
 
         <input type="submit" value="Calculate Cost">

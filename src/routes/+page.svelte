@@ -6,7 +6,7 @@
     <title>Home</title>
 </svelte:head>
 
-<Navbar class="sticky" />
+<Navbar />
 
 <h1>Home</h1>
 

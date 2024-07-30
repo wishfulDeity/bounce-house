@@ -90,5 +90,36 @@
             "children"
         ],
         "price": 220.00
+    },
+    {
+        "name": "Dashcon Ball Pit",
+        "image": "/src/lib/images/dashcon.jpeg",
+        "description": "At least it's inflatable...",
+        "space_lwh": "2m x 2m x 2m",
+        "audience": [
+            "children",
+            "adults"
+        ],
+        "price": 45.00
+    },
+    {
+        "name": "Aitken Basin",
+        "image": "/src/lib/images/aitkenbasin.jpeg",
+        "description": "Literally just the biggest crater on the moon",
+        "space_lwh": "2,500,000m x 2,500,000m x 7,200m",
+        "audience": [
+            "adults"
+        ],
+        "price": 1.682e+23
+    },
+    {
+        "name": "Valles Marineris",
+        "image": "/src/lib/images/vallesmarineris.jpg",
+        "description": "Y'know that big slash in Mars? Yeah. This is that.",
+        "space_lwh": "3,000,000m x 600,000m x 8000m",
+        "audience": [
+            "adults"
+        ],
+        "price": 4.594e+31
     }
 ]

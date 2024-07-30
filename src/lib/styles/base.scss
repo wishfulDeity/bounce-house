@@ -62,14 +62,12 @@ ul {
     margin-left: calc(50vw - 150px);
 }
 
-.sticky {
-    position: sticky;
-}
-
 .nav-container {
     display: flex;
     align-items: center;
     position: sticky;
+    top: 0px;
+    z-index: 2;
     margin: auto;
     background-color: $nav-bg;
     height: 6vh;

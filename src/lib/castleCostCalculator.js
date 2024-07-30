@@ -17,34 +17,48 @@ export function calculateCost(
         case "small":
             workingSize = 3;
             baseCost = 500;
+            break;
 
         case "medium":
             workingSize = 4;
             baseCost = 750;
+            break;
 
         case "large":
             workingSize = 5;
             baseCost = 1000;
+            break;
     }
 
     // Get cost of walls
     switch (walls) {
         case "inflated":
             wallsCostPerMetre = 40;
+            break;
 
         case "netted":
             wallsCostPerMetre = 25;
+            break;
     }
+
+    console.log(`before assign: ${finalTotal}`);
+
+    // Comments are for a castle with a "medium" size,
+    // inflatable walls, 2 tunnels, and 1 slide.
 
     // Set finalTotal to baseCost to add stuff on later
     finalTotal = baseCost;
     // 750
+
+    console.log(`after assign: ${finalTotal}`);
 
     // Do walls cost
     finalTotal += 3 * workingSize * wallsCostPerMetre;
     // 750 + 3 * 4 * 40 
     // = 750 + 480
     // = 1230
+
+    console.log(`after wall: ${finalTotal}`);
 
     // Add cost of tunnels and slides
     finalTotal += costPerSlide * slides;
@@ -55,13 +69,12 @@ export function calculateCost(
     // = 1390 + 140
     // = 1530
 
-    console.log(`total before profit: ${finalTotal}`);
+    console.log(`total before profit (after tunnels & slides): ${finalTotal}`);
 
     // Add profit
     finalTotal *= profit;
     // 1530 * 1.25
     // = 1912.5
-    // ^ APPARENTLY NOT??!??!!!?
 
     console.log(`finalTotal: ${finalTotal}`);
     return finalTotal;

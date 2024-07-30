@@ -7,7 +7,7 @@
     <title>Rentals</title>
 </svelte:head>
 
-<Navbar class="sticky" />
+<Navbar />
 
 <h1>Rentals</h1>
 
@@ -18,7 +18,7 @@
 <div class="product-container">
     {#each products as product}
         <div class="product">
-            <a href="mailto:example@gmail.com?subject={product.name}">
+            <a href="mailto:example@gmail.com?subject=Customer inquiry: {product.name}">
                 <div class="product-card">
                     <img src={product.image} alt={product.description} />
                 </div>

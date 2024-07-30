@@ -6,8 +6,7 @@
     <title>Contact</title>
 </svelte:head>
 
-<Navbar class="sticky" />
-
+<Navbar />
 
 <h1>Contact us</h1>
 

@@ -2,7 +2,7 @@
     import Navbar from "$lib/Navbar.svelte";
 </script>
 
-<Navbar class="sticky" />
+<Navbar />
 
 <div class="product-container">
     <div class="product">
