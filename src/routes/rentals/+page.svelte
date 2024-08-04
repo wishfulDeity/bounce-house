@@ -1,6 +1,11 @@
 <script>
     import products from "$lib/data/products.json";
+    import contactInfo from "$lib/data/contactInfo.json";
     import Navbar from "$lib/Navbar.svelte";
+
+    let email = contactInfo[0].email;
+
+    let shopMusic = "$lib/audio/shop.mp3";
 </script>
 
 <svelte:head>
@@ -9,16 +14,14 @@
 
 <Navbar />
 
-<h1>Rentals</h1>
-
-<h3>Pre-made castles:</h3>
+<h1>Pre-made Castles</h1>
 <p>Actual products may differ from what is shown in the images</p>
 <p>Click the cards to send us an email at example@gmail.com!</p>
 
 <div class="product-container">
     {#each products as product}
         <div class="product">
-            <a href="mailto:example@gmail.com?subject=Customer inquiry: {product.name}">
+            <a href="mailto:{email}?subject=Customer inquiry: {product.name}">
                 <div class="product-card">
                     <img src={product.image} alt={product.description} />
                 </div>

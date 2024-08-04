@@ -1,0 +1,16 @@
+[
+    {
+        "name": "The Bounce House",
+        "address": [
+            "Unit 2, 114 St James Road",
+            "Hornby",
+            "Christchurch",
+            "New Zealand",
+            "8443"
+        ],
+        "phone": "03-861213",
+        "fax": "03 868271",
+        "email": "placeholder@bouncehouse.com",
+        "web": "bouncehouse.com"
+    }
+]

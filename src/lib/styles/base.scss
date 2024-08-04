@@ -224,17 +224,22 @@ ul {
     .mainlabel,
     p,
     input,
-    select {
+    select,
+    a {
         display: block;
         margin: 6px auto 8px auto;
     }
 
-    input {
+    input,
+    a {
         border-style: none;
         background-color: #fff;
         padding: 0.5em;
         cursor: pointer;
         box-shadow: 0px 2px 2px 0px $dropshadow;
+        font-size: small;
+        text-decoration: none;
+        color: #000
     }
 
     select {

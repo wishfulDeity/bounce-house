@@ -92,34 +92,45 @@
         "price": 220.00
     },
     {
-        "name": "Dashcon Ball Pit",
-        "image": "/src/lib/images/dashcon.jpeg",
-        "description": "At least it's inflatable...",
-        "space_lwh": "2m x 2m x 2m",
+        "name": "Combat Alley",
+        "image": "/src/lib/images/combatalley.jpeg",
+        "description": "Large castle with inbuilt inflatable catapults and defence walls (inflatable ammo included!)",
+        "space_lwh": "5m x 5m x 4m",
+        "audience": [
+            "children"
+        ],
+        "price": 220.00
+    },
+    {
+        "name": "Challengers Run",
+        "image": "/src/lib/images/challengersrun.jpeg",
+        "description": "Obstacle course castle with slides, tunnels and walls",
+        "space_lwh": "9m x 3m x 3.5m",
         "audience": [
             "children",
             "adults"
         ],
-        "price": 45.00
+        "price": 240.00
     },
     {
-        "name": "Aitken Basin",
-        "image": "/src/lib/images/aitkenbasin.jpeg",
-        "description": "Literally just the biggest crater on the moon",
-        "space_lwh": "2,500,000m x 2,500,000m x 7,200m",
+        "name": "The Windsor",
+        "image": "/src/lib/images/thewindsor.jpeg",
+        "description": "Large castle with 2 slides and water fillable moat",
+        "space_lwh": "6m x 6m x 4m",
         "audience": [
-            "adults"
+            "children"
         ],
-        "price": 1.682e+23
+        "price": 250.00
     },
     {
-        "name": "Valles Marineris",
-        "image": "/src/lib/images/vallesmarineris.jpg",
-        "description": "Y'know that big slash in Mars? Yeah. This is that.",
-        "space_lwh": "3,000,000m x 600,000m x 8000m",
+        "name": "Lazy Bounce Extreme",
+        "image": "/src/lib/images/lazybounceextreme.jpeg",
+        "description": "Large castle with luxury seating",
+        "space_lwh": "6m x 6m x 3.5m",
         "audience": [
+            "children",
             "adults"
         ],
-        "price": 4.594e+31
+        "price": 220.00
     }
 ]

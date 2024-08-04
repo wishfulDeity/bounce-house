@@ -1,18 +1,24 @@
 <script>
     import { calculateCost } from "$lib/castleCostCalculator.js";
     import Navbar from "$lib/Navbar.svelte";
+    import contactInfo from "$lib/data/contactInfo.json"
 
-    let size;
-    let walls;
-    let tunnels;
-    let slides;
+    let email = contactInfo[0].email;
+
+    let size = "small";
+    let walls = "inflated";
+    let tunnels = 0;
+    let slides = 0;
     let profit = 1.25;
+    let maxExtras = 10;
     let totalEstimatedCost;
 
     $: {
         console.log(`size:${size}\nwalls:${walls}\ntunnels:${tunnels}\nslides:${slides}\ntotalEstimatedCost:${totalEstimatedCost}`);
         totalEstimatedCost = calculateCost(size, walls, slides, tunnels, profit);
     }
+
+    console.log(contactInfo);
 </script>
 
 <svelte:head>
@@ -21,7 +27,7 @@
 
 <Navbar />
 
-<h1>Development</h1>
+<h1>Castle Development</h1>
 
 <div class="cost-calculator-container">
     <form>
@@ -42,9 +48,16 @@
         </select>
 
         <label for="tunnel">Tunnels ($70 per)</label>
-        <input type="number" id="tunnel" name="tunnel" bind:value={tunnels} min="0" max="10">
+        <input type="number" id="tunnel" name="tunnel" bind:value={tunnels} min="0" max={maxExtras}>
         <label for="slide">Slides ($160 per)</label>
-        <input type="number" id="slide" name="slide" bind:value={slides} min="0" max="10">
+        <input type="number" id="slide" name="slide" bind:value={slides} min="0" max={maxExtras}>
+        <br />
+        <a
+            class="submit-button"
+            href="mailto:{email}?subject={size} bouncy castle with {walls} walls, {tunnels} tunnels, and {slides} slides (estimated cost: {totalEstimatedCost})"
+        >
+        Want to buy this? Email us!
+        </a>
     </form>
 </div>
 
