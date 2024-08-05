@@ -8,25 +8,30 @@ export function calculateCost(
     let workingSize = 0;
     let baseCost = 0;
     let wallsCostPerMetre = 0;
-    let finalTotal = 0;
+    let baseTimeDays = 0;
     let costPerSlide = 160;
     let costPerTunnel = 70;
+    let finalTotal = 0;
+    let finalTimeDays = 0;
 
     // Get size costs and how long each wall is
     switch (size) {
         case "small":
             workingSize = 3;
             baseCost = 500;
+            baseTimeDays = 2;
             break;
 
         case "medium":
             workingSize = 4;
             baseCost = 750;
+            baseTimeDays = 3;
             break;
 
         case "large":
             workingSize = 5;
             baseCost = 1000;
+            baseTimeDays = 4;
             break;
     }
 
@@ -58,6 +63,9 @@ export function calculateCost(
     // = 750 + 480
     // = 1230
 
+    // Do time
+    finalTimeDays += baseTimeDays;
+
     console.log(`after wall: ${finalTotal}`);
 
     // Add cost of tunnels and slides
@@ -69,6 +77,9 @@ export function calculateCost(
     // = 1390 + 140
     // = 1530
 
+    // Time for each extra
+    finalTimeDays += slides + tunnels;
+
     console.log(`total before profit (after tunnels & slides): ${finalTotal}`);
 
     // Add profit
@@ -77,5 +88,6 @@ export function calculateCost(
     // = 1912.5
 
     console.log(`finalTotal: ${finalTotal}`);
-    return finalTotal;
+    console.log(`finalTime: ${finalTimeDays}`);
+    return [finalTotal, finalTimeDays];
 }

@@ -16,6 +16,8 @@ $josefin:
     Helvetica,
     sans-serif;
 
+// ============
+
 body {
     margin: 0px;
 }
@@ -62,6 +64,23 @@ ul {
     margin-left: calc(50vw - 150px);
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+
+    .contact-button {
+        text-decoration: none;
+        font-family: $josefin;
+        color: black;
+
+        &:hover {
+            color: $text-secondary;
+            text-decoration: underline;
+        }
+    }
+}
+
 .nav-container {
     display: flex;
     align-items: center;
@@ -70,7 +89,7 @@ ul {
     z-index: 2;
     margin: auto;
     background-color: $nav-bg;
-    height: 6vh;
+    height: 8vh;
     padding: 15px 5px 15px 5px;
 
     img {

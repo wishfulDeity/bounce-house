@@ -34,8 +34,6 @@
         </a>
         {#if showDropdown}
             <div class="dropdown-content">
-                <a href="/the-rat-dimension" on:click={toggleDropdown}>
-                </a>
                 <a href="/rentals" on:click={toggleDropdown}>
                     Rentals
                 </a>

@@ -11,11 +11,15 @@
     let slides = 0;
     let profit = 1.25;
     let maxExtras = 10;
-    let totalEstimatedCost;
+    let costAndTime;
+    let estimatedCost;
+    let estimatedTime;
 
     $: {
-        console.log(`size:${size}\nwalls:${walls}\ntunnels:${tunnels}\nslides:${slides}\ntotalEstimatedCost:${totalEstimatedCost}`);
-        totalEstimatedCost = calculateCost(size, walls, slides, tunnels, profit);
+        console.log(`size:${size}\nwalls:${walls}\ntunnels:${tunnels}\nslides:${slides}\ntotalEstimatedCost:${estimatedCost}`);
+        costAndTime = calculateCost(size, walls, slides, tunnels, profit);
+        estimatedCost = costAndTime[0];
+        estimatedTime = costAndTime[1];
     }
 
     console.log(contactInfo);
@@ -32,7 +36,8 @@
 <div class="cost-calculator-container">
     <form>
         <h2>Castle Cost Calculator™</h2>
-        <h3>${totalEstimatedCost}</h3>
+        <h3>${estimatedCost}</h3>
+        <h4>Estimated build time: ~{estimatedTime}-ish days</h4>
 
         <label for="size" class="mainlabel">Size</label>
         <select name="size" id="size" bind:value={size}>
@@ -54,7 +59,7 @@
         <br />
         <a
             class="submit-button"
-            href="mailto:{email}?subject={size} bouncy castle with {walls} walls, {tunnels} tunnels, and {slides} slides (estimated cost: {totalEstimatedCost})"
+            href="mailto:{email}?subject={size} bouncy castle with {walls} walls, {tunnels} tunnels, and {slides} slides (estimated cost: {estimatedCost}, eta: {estimatedTime} days)"
         >
         Want to buy this? Email us!
         </a>

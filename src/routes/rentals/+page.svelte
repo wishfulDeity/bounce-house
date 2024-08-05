@@ -16,7 +16,7 @@
 
 <h1>Pre-made Castles</h1>
 <p>Actual products may differ from what is shown in the images</p>
-<p>Click the cards to send us an email at example@gmail.com!</p>
+<p>Click the cards to send us an email at {email}!</p>
 
 <div class="product-container">
     {#each products as product}

@@ -2,12 +2,14 @@
     import Navbar from "$lib/Navbar.svelte";
 
     let ratGenerator = [];
-    for (let i = 1; i <= 1e+3; i ++) {
+    for (let i = 1; i <= 1e+4; i ++) {
         ratGenerator.push(i);
     }
 </script>
 
 <Navbar />
+
+<h1>THE RAT DIMENSION!!!</h1>
 
 <div class="product-container">
     {#each ratGenerator as ratID}

@@ -14,4 +14,11 @@
 <h1>Contact us</h1>
 
 <h3>Contact info:</h3>
-<p></p>
+<p>{contact.name}</p>
+{#each contact.address as line}
+<p>{line}</p>
+{/each}
+<p>PH: {contact.phone}</p>
+<p>FAX: {contact.fax}</p>
+<p>EMAIL: {contact.email}</p>
+<p>WEB: {contact.web}</p>
